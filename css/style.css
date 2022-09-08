@@ -11322,6 +11322,10 @@ a.support__slide-item-value:hover {
   line-height: 1.55;
 }
 
+.select__item {
+  display: block;
+}
+
 
 
 .mobile {
@@ -18271,6 +18275,10 @@ a.support__slide-item-value:hover {
     line-height: 1.63;
   }
  }
+
+.popup-window[style*="block"] {
+  display: none !important;
+}
 
 
 /*# sourceMappingURL=style.css.map */
