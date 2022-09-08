@@ -617,9 +617,11 @@ if ($('#spoller-filter').length) {
 // раскрытие доп фильров в фильтре
 $(document).ready(function () {
     $('.filter__more-filters').click(function (event) {
-        $(this).toggleClass('active').next().slideToggle(300);
+        $(this).toggleClass('active');
+        $('.filter__body-top').toggleClass('active');
         if ($(this).hasClass('active')) {
             $(this).find('span').html('Скрыть фильтры');
+            $('.filter__select.active').removeClass('active');
         } else {
             $(this).find('span').html('Ещё фильтры');
         }
