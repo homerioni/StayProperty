@@ -10543,6 +10543,7 @@ a.support__slide-item-value:hover {
   position: relative;
   margin-bottom: 1rem;
   margin-right: 2rem;
+  white-space: nowrap;
 }
 .breadcrumbs a:not(:last-child)::before {
   content: "";
