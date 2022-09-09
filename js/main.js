@@ -886,6 +886,13 @@ $('.close-popup').click(function () {
     $('.accepted').fadeOut(800);
 });
 
+// Текстовый попап
+    $('.review-btn').click(function () {
+        $('.modal-review__text').text($(this).parent().find('.review-text').text());
+        $('body').addClass('lock');
+        $('.modal-review').css('display', 'flex').hide().fadeIn();
+    });
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////

@@ -85,7 +85,7 @@ $(document).ready(function() {
 	};
 
 	$('.card-more-btn').click(function () {
-		$(this).parent().toggleClass('active');
+		$(this).parent().find('.card__infrastructure-column.desctop').slideToggle();
 		$(this).toggleClass('active');
 	});
 
@@ -128,11 +128,6 @@ $(document).ready(function() {
 	$('.open-modal-vacancy').click(function () {
 		$('body').addClass('lock');
 		$('.modal-vacancy').css('display', 'flex').hide().fadeIn();
-	});
-	$('.review-btn').click(function () {
-		$('body').addClass('lock');
-		$('.modal-review__text').text($(this).parent().find('.review-text').text());
-		$('.modal-review').css('display', 'flex').hide().fadeIn();
 	});
 
 	const blogContentSlider = new Swiper('.blog__content.swiper-slider', {

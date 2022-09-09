@@ -537,8 +537,9 @@ input[type=number] {
   transition: 0.8s;
 }
 .swiper__arrow.swiper-button-disabled {
-  width: 7.6rem;
-  height: 7.6rem;
+  /*width: 7.6rem;*/
+  /*height: 7.6rem;*/
+  transform: scale(0.8);
 }
 .swiper__arrow.swiper-button-disabled img {
   width: 1.5rem;
@@ -6169,7 +6170,6 @@ a.support__slide-item-value:hover {
 }
 .worker__quote-quote:last-child {
   margin-left: auto;
-  width: 3rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -11921,8 +11921,8 @@ a.support__slide-item-value:hover {
     height: 2rem;
   }
   .swiper__arrow.swiper-button-disabled {
-    width: 8.6rem;
-    height: 8.6rem;
+    /*width: 8.6rem;*/
+    /*height: 8.6rem;*/
   }
   .swiper__arrow.swiper-button-disabled img {
     width: 1.5rem;
@@ -15552,11 +15552,11 @@ a.support__slide-item-value:hover {
     line-height: 1.8;
   }
   .worker__quote-quote {
-    font-size: 3.2rem;
+    width: 4.2rem;
+    height: 3.4rem;
   }
   .worker__quote-quote:last-child {
     margin-left: auto;
-    width: 3rem;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
