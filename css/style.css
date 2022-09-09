@@ -11235,6 +11235,7 @@ a.support__slide-item-value:hover {
   line-height: 2.5rem;
 }
 .error-404 {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -11261,6 +11262,7 @@ a.support__slide-item-value:hover {
   font-size: 6rem;
   line-height: 7.6rem;
   text-align: center;
+  color: white;
 }
 .error-404__btn {
   display: flex;
