@@ -5464,7 +5464,7 @@ a.support__slide-item-value:hover {
           justify-content: flex-end;
   position: relative;
   width: 100%;
-  height: 43.3rem;
+  min-height: 43.3rem;
 }
 .articles.page-news .articles__box:not(:last-child) {
   margin-bottom: 4.5rem;
@@ -5472,7 +5472,8 @@ a.support__slide-item-value:hover {
 .articles.page-news .articles__box-photo {
   flex: none;
   width: 66.5rem;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   border-radius: 4rem;
 }
 .articles.page-news .articles__box-photo img {
