@@ -11355,6 +11355,17 @@ a.support__slide-item-value:hover {
 .select__item {
   display: block;
 }
+.real-estate__error-search {
+  width: 100%;
+  margin-top: 5rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.5rem;
+  text-align: center;
+}
+.real-estate__error-search > button:hover {
+  color: rgb(1, 153, 228);
+}
 
 
 
@@ -18304,11 +18315,15 @@ a.support__slide-item-value:hover {
     font-size: 3.2rem;
     line-height: 1.63;
   }
+  .real-estate__error-search {
+    font-size: 4.4rem;
+    line-height: 6rem;
+  }
  }
 
-/*.popup-window[style*="block"] {*/
-/*  display: none !important;*/
-/*}*/
+.popup-window[style*="block"] {
+  display: none !important;
+}
 
 
 /*# sourceMappingURL=style.css.map */
