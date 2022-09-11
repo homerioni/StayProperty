@@ -58,12 +58,7 @@ let select = function () {
     });
 
     function selectToggle() {
-        if (!this.parentElement.classList.contains('active')) {
-            $('.select__header').parent().removeClass('active');
-            this.parentElement.classList.add('active');
-        } else {
-            this.parentElement.classList.remove('active');
-        }
+        this.parentElement.classList.toggle('active');
     }
 
     function selectChoose() {
@@ -113,11 +108,11 @@ $(".objects-box__like").click(function (e) {
     $(this).toggleClass('active');
 })
 
-$(".real-estate__top-sorting-item").click(function (e) {
-    e.preventDefault();
-    $(".real-estate__top-sorting-item").removeClass('active');
-    $(this).addClass('active');
-})
+// $(".real-estate__top-sorting-item").click(function (e) {
+//     e.preventDefault();
+//     $(".real-estate__top-sorting-item").removeClass('active');
+//     $(this).addClass('active');
+// })
 
 $(".real-estate__view-btn").click(function (e) {
     e.preventDefault();
@@ -885,13 +880,6 @@ $('.popup-accepted').click(function (e) {
 $('.close-popup').click(function () {
     $('.accepted').fadeOut(800);
 });
-
-// Текстовый попап
-    $('.review-btn').click(function () {
-        $('.modal-review__text').text($(this).parent().find('.review-text').text());
-        $('body').addClass('lock');
-        $('.modal-review').css('display', 'flex').hide().fadeIn();
-    });
 
 
 
