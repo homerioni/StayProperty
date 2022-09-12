@@ -318,7 +318,7 @@
                         <div class="contacts__tablink-item tablinks " onclick="openTab(event, 'tab-4')">Офис в Казахстане</div>
                     </div>
                     <div class="contacts__tab-content-wrap">
-                        <div class="contacts__tab-content tabcontent" id="tab-1" style="display: block;">
+                        <div class="contacts__tab-content tabcontent" id="tab-1" style="display: flex;">
                             <div class="contacts__tab-title">Аланья</div>
                             <div class="contacts__tab-subtitle">
                                 <div class="">Телефон: <a href="tel:+90-530-178-2916">+90-530-178-2916</a></div>
@@ -327,104 +327,87 @@
                             <div class="contacts__tab-description">
                                 Расположенная в Махмутларе, Аланья, наша квартира спроектирована как 1+1 и имеет площадь 62 м2. Он расположен на 3-м этаже 12-этажного дома и выходит окнами на восток. Расстояние до моря составляет 600 метров.
                             </div>
-                            <div class="contacts__tab-info-wrap">
-                                <div class="contacts__tab-info-left">
-                                    <div class="contacts__tab-img">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/2bd/0qrupmcws30pesbciji51km2o7zk7cl3.png" alt="">
-                                    </div>
-                                    <div class="description__info">
-                                        <div class="description__spoller">
-                                            <div class="description__spoller-title-wrap">
-                                                <div class="description__spoller-title-text">
-                                                    <div class="description__spoller-title-box">
-                                                        <div class="description__spoller-title">
-                                                            Расположение на карте
-                                                        </div>
-                                                        <div class="description__spoller-subtitle">
-                                                            Территориальное местонахождение объекта
-                                                        </div>
+                            <div class="contacts__tab-info-left">
+                                <div class="contacts__tab-img">
+                                    <img src="http://stay.fixmaski.ru/upload/iblock/2bd/0qrupmcws30pesbciji51km2o7zk7cl3.png" alt="">
+                                </div>
+                                <div class="description__info">
+                                    <div class="description__spoller">
+                                        <div class="description__spoller-title-wrap">
+                                            <div class="description__spoller-title-text">
+                                                <div class="description__spoller-title-box">
+                                                    <div class="description__spoller-title">
+                                                        Расположение на карте
+                                                    </div>
+                                                    <div class="description__spoller-subtitle">
+                                                        Территориальное местонахождение объекта
                                                     </div>
                                                 </div>
-                                                <div class="description__spoller-scenery">
-                                                    <div class="slice"></div>
-                                                    <button class="description__btn">
-                                                        <div class="corner"></div>
-                                                        <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
-                                                        </svg>
-                                                    </button>
-                                                </div>
                                             </div>
-                                            <div class="description__spoller-content">
-                                                <div class="description__spoller-map" id="map"></div>
-                                                <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
-                                                <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
-                                                </script>
-                                                <script>
-                                                    function initMap() {
-                                                        var element = document.getElementById('map');
-                                                        var options = {
-                                                            zoom: 5,
-                                                            center: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                        };
-
-                                                        var myMap = new google.maps.Map(element, options);
-
-                                                        var markers = [{
-                                                            coordinates: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                            info: '<h3>Турция</h3>'
+                                            <div class="description__spoller-scenery">
+                                                <div class="slice"></div>
+                                                <button class="description__btn">
+                                                    <div class="corner"></div>
+                                                    <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="description__spoller-content">
+                                            <div class="description__spoller-map" id="map"></div>
+                                            <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
+                                            <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
+                                            </script>
+                                            <script>
+                                                function initMap() {
+                                                    var element = document.getElementById('map');
+                                                    var options = {
+                                                        zoom: 5,
+                                                        center: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
                                                         },
-                                                        ];
+                                                    };
 
-                                                        for (var i = 0; i < markers.length; i++) {
-                                                            addMarker(markers[i]);
+                                                    var myMap = new google.maps.Map(element, options);
+
+                                                    var markers = [{
+                                                        coordinates: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
+                                                        },
+                                                        info: '<h3>Турция</h3>'
+                                                    },
+                                                    ];
+
+                                                    for (var i = 0; i < markers.length; i++) {
+                                                        addMarker(markers[i]);
+                                                    }
+
+                                                    function addMarker(properties) {
+                                                        var marker = new google.maps.Marker({
+                                                            position: properties.coordinates,
+                                                            map: myMap
+                                                        });
+
+                                                        if (properties.image) {
+                                                            marker.setIcon(properties.image);
                                                         }
 
-                                                        function addMarker(properties) {
-                                                            var marker = new google.maps.Marker({
-                                                                position: properties.coordinates,
-                                                                map: myMap
+                                                        if (properties.info) {
+                                                            var InfoWindow = new google.maps.InfoWindow({
+                                                                content: properties.info
                                                             });
 
-                                                            if (properties.image) {
-                                                                marker.setIcon(properties.image);
-                                                            }
-
-                                                            if (properties.info) {
-                                                                var InfoWindow = new google.maps.InfoWindow({
-                                                                    content: properties.info
-                                                                });
-
-                                                                marker.addListener('click', function () {
-                                                                    InfoWindow.open(myMap, marker);
-                                                                });
-                                                            }
+                                                            marker.addListener('click', function () {
+                                                                InfoWindow.open(myMap, marker);
+                                                            });
                                                         }
                                                     }
-                                                </script>
-                                            </div>
+                                                }
+                                            </script>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="contacts__tab-info-block desctop">
-                                    <div class="articles__right-item black all-bg desctop">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/b51/d8hwvlsx8smzs2r0iomu3t8ikaevh9o8.png" alt="">
-                                        <div class="articles__item-title">Текст 1</div>
-                                        <div class="articles__item-subtitle">
-                                            Закажите консультацию у опытных менеджеров, которые помогут Вам во всех вопросах
-                                        </div>
-                                        <button type="button" class="articles__item-btn btn open-modal-callback">
-                                            <span>Заказать звонок</span>
-                                            <div class="btn__arrow btn--red">
-                                                <img src="http://stay.fixmaski.ru/local/templates/stayproperty/img/arrow-white.svg" alt="">
-                                            </div>
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -438,104 +421,87 @@
                             <div class="contacts__tab-description">
                                 Расположенная в Стамбуле, Аланья, наша квартира спроектирована как 1+1 и имеет площадь 62 м2. Он расположен на 3-м этаже 12-этажного дома и выходит окнами на восток. Расстояние до моря составляет 600 метров.
                             </div>
-                            <div class="contacts__tab-info-wrap">
-                                <div class="contacts__tab-info-left">
-                                    <div class="contacts__tab-img">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/98d/tr1akq7nmhvooxnf0rkkr6xyxc7dfl2g.png" alt="">
-                                    </div>
-                                    <div class="description__info">
-                                        <div class="description__spoller">
-                                            <div class="description__spoller-title-wrap">
-                                                <div class="description__spoller-title-text">
-                                                    <div class="description__spoller-title-box">
-                                                        <div class="description__spoller-title">
-                                                            Расположение на карте
-                                                        </div>
-                                                        <div class="description__spoller-subtitle">
-                                                            Территориальное местонахождение объекта
-                                                        </div>
+                            <div class="contacts__tab-info-left">
+                                <div class="contacts__tab-img">
+                                    <img src="http://stay.fixmaski.ru/upload/iblock/98d/tr1akq7nmhvooxnf0rkkr6xyxc7dfl2g.png" alt="">
+                                </div>
+                                <div class="description__info">
+                                    <div class="description__spoller">
+                                        <div class="description__spoller-title-wrap">
+                                            <div class="description__spoller-title-text">
+                                                <div class="description__spoller-title-box">
+                                                    <div class="description__spoller-title">
+                                                        Расположение на карте
+                                                    </div>
+                                                    <div class="description__spoller-subtitle">
+                                                        Территориальное местонахождение объекта
                                                     </div>
                                                 </div>
-                                                <div class="description__spoller-scenery">
-                                                    <div class="slice"></div>
-                                                    <button class="description__btn">
-                                                        <div class="corner"></div>
-                                                        <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
-                                                        </svg>
-                                                    </button>
-                                                </div>
                                             </div>
-                                            <div class="description__spoller-content">
-                                                <div class="description__spoller-map" id="map"></div>
-                                                <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
-                                                <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
-                                                </script>
-                                                <script>
-                                                    function initMap() {
-                                                        var element = document.getElementById('map');
-                                                        var options = {
-                                                            zoom: 5,
-                                                            center: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                        };
-
-                                                        var myMap = new google.maps.Map(element, options);
-
-                                                        var markers = [{
-                                                            coordinates: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                            info: '<h3>Турция</h3>'
+                                            <div class="description__spoller-scenery">
+                                                <div class="slice"></div>
+                                                <button class="description__btn">
+                                                    <div class="corner"></div>
+                                                    <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="description__spoller-content">
+                                            <div class="description__spoller-map" id="map"></div>
+                                            <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
+                                            <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
+                                            </script>
+                                            <script>
+                                                function initMap() {
+                                                    var element = document.getElementById('map');
+                                                    var options = {
+                                                        zoom: 5,
+                                                        center: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
                                                         },
-                                                        ];
+                                                    };
 
-                                                        for (var i = 0; i < markers.length; i++) {
-                                                            addMarker(markers[i]);
+                                                    var myMap = new google.maps.Map(element, options);
+
+                                                    var markers = [{
+                                                        coordinates: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
+                                                        },
+                                                        info: '<h3>Турция</h3>'
+                                                    },
+                                                    ];
+
+                                                    for (var i = 0; i < markers.length; i++) {
+                                                        addMarker(markers[i]);
+                                                    }
+
+                                                    function addMarker(properties) {
+                                                        var marker = new google.maps.Marker({
+                                                            position: properties.coordinates,
+                                                            map: myMap
+                                                        });
+
+                                                        if (properties.image) {
+                                                            marker.setIcon(properties.image);
                                                         }
 
-                                                        function addMarker(properties) {
-                                                            var marker = new google.maps.Marker({
-                                                                position: properties.coordinates,
-                                                                map: myMap
+                                                        if (properties.info) {
+                                                            var InfoWindow = new google.maps.InfoWindow({
+                                                                content: properties.info
                                                             });
 
-                                                            if (properties.image) {
-                                                                marker.setIcon(properties.image);
-                                                            }
-
-                                                            if (properties.info) {
-                                                                var InfoWindow = new google.maps.InfoWindow({
-                                                                    content: properties.info
-                                                                });
-
-                                                                marker.addListener('click', function () {
-                                                                    InfoWindow.open(myMap, marker);
-                                                                });
-                                                            }
+                                                            marker.addListener('click', function () {
+                                                                InfoWindow.open(myMap, marker);
+                                                            });
                                                         }
                                                     }
-                                                </script>
-                                            </div>
+                                                }
+                                            </script>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="contacts__tab-info-block desctop">
-                                    <div class="articles__right-item black all-bg desctop">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/b51/d8hwvlsx8smzs2r0iomu3t8ikaevh9o8.png" alt="">
-                                        <div class="articles__item-title">Текст 1</div>
-                                        <div class="articles__item-subtitle">
-                                            Закажите консультацию у опытных менеджеров, которые помогут Вам во всех вопросах
-                                        </div>
-                                        <button type="button" class="articles__item-btn btn open-modal-callback">
-                                            <span>Заказать звонок</span>
-                                            <div class="btn__arrow btn--red">
-                                                <img src="http://stay.fixmaski.ru/local/templates/stayproperty/img/arrow-white.svg" alt="">
-                                            </div>
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -549,104 +515,87 @@
                             <div class="contacts__tab-description">
                                 Расположенная в Москве, Аланья, наша квартира спроектирована как 1+1 и имеет площадь 62 м2. Он расположен на 3-м этаже 12-этажного дома и выходит окнами на восток. Расстояние до моря составляет 600 метров.
                             </div>
-                            <div class="contacts__tab-info-wrap">
-                                <div class="contacts__tab-info-left">
-                                    <div class="contacts__tab-img">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/65d/ps57swciah0ubhzopbcb893666ire3ez.png" alt="">
-                                    </div>
-                                    <div class="description__info">
-                                        <div class="description__spoller">
-                                            <div class="description__spoller-title-wrap">
-                                                <div class="description__spoller-title-text">
-                                                    <div class="description__spoller-title-box">
-                                                        <div class="description__spoller-title">
-                                                            Расположение на карте
-                                                        </div>
-                                                        <div class="description__spoller-subtitle">
-                                                            Территориальное местонахождение объекта
-                                                        </div>
+                            <div class="contacts__tab-info-left">
+                                <div class="contacts__tab-img">
+                                    <img src="http://stay.fixmaski.ru/upload/iblock/65d/ps57swciah0ubhzopbcb893666ire3ez.png" alt="">
+                                </div>
+                                <div class="description__info">
+                                    <div class="description__spoller">
+                                        <div class="description__spoller-title-wrap">
+                                            <div class="description__spoller-title-text">
+                                                <div class="description__spoller-title-box">
+                                                    <div class="description__spoller-title">
+                                                        Расположение на карте
+                                                    </div>
+                                                    <div class="description__spoller-subtitle">
+                                                        Территориальное местонахождение объекта
                                                     </div>
                                                 </div>
-                                                <div class="description__spoller-scenery">
-                                                    <div class="slice"></div>
-                                                    <button class="description__btn">
-                                                        <div class="corner"></div>
-                                                        <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
-                                                        </svg>
-                                                    </button>
-                                                </div>
                                             </div>
-                                            <div class="description__spoller-content">
-                                                <div class="description__spoller-map" id="map"></div>
-                                                <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
-                                                <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
-                                                </script>
-                                                <script>
-                                                    function initMap() {
-                                                        var element = document.getElementById('map');
-                                                        var options = {
-                                                            zoom: 5,
-                                                            center: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                        };
-
-                                                        var myMap = new google.maps.Map(element, options);
-
-                                                        var markers = [{
-                                                            coordinates: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                            info: '<h3>Турция</h3>'
+                                            <div class="description__spoller-scenery">
+                                                <div class="slice"></div>
+                                                <button class="description__btn">
+                                                    <div class="corner"></div>
+                                                    <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="description__spoller-content">
+                                            <div class="description__spoller-map" id="map"></div>
+                                            <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
+                                            <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
+                                            </script>
+                                            <script>
+                                                function initMap() {
+                                                    var element = document.getElementById('map');
+                                                    var options = {
+                                                        zoom: 5,
+                                                        center: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
                                                         },
-                                                        ];
+                                                    };
 
-                                                        for (var i = 0; i < markers.length; i++) {
-                                                            addMarker(markers[i]);
+                                                    var myMap = new google.maps.Map(element, options);
+
+                                                    var markers = [{
+                                                        coordinates: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
+                                                        },
+                                                        info: '<h3>Турция</h3>'
+                                                    },
+                                                    ];
+
+                                                    for (var i = 0; i < markers.length; i++) {
+                                                        addMarker(markers[i]);
+                                                    }
+
+                                                    function addMarker(properties) {
+                                                        var marker = new google.maps.Marker({
+                                                            position: properties.coordinates,
+                                                            map: myMap
+                                                        });
+
+                                                        if (properties.image) {
+                                                            marker.setIcon(properties.image);
                                                         }
 
-                                                        function addMarker(properties) {
-                                                            var marker = new google.maps.Marker({
-                                                                position: properties.coordinates,
-                                                                map: myMap
+                                                        if (properties.info) {
+                                                            var InfoWindow = new google.maps.InfoWindow({
+                                                                content: properties.info
                                                             });
 
-                                                            if (properties.image) {
-                                                                marker.setIcon(properties.image);
-                                                            }
-
-                                                            if (properties.info) {
-                                                                var InfoWindow = new google.maps.InfoWindow({
-                                                                    content: properties.info
-                                                                });
-
-                                                                marker.addListener('click', function () {
-                                                                    InfoWindow.open(myMap, marker);
-                                                                });
-                                                            }
+                                                            marker.addListener('click', function () {
+                                                                InfoWindow.open(myMap, marker);
+                                                            });
                                                         }
                                                     }
-                                                </script>
-                                            </div>
+                                                }
+                                            </script>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="contacts__tab-info-block desctop">
-                                    <div class="articles__right-item black all-bg desctop">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/b51/d8hwvlsx8smzs2r0iomu3t8ikaevh9o8.png" alt="">
-                                        <div class="articles__item-title">Текст 1</div>
-                                        <div class="articles__item-subtitle">
-                                            Закажите консультацию у опытных менеджеров, которые помогут Вам во всех вопросах
-                                        </div>
-                                        <button type="button" class="articles__item-btn btn open-modal-callback">
-                                            <span>Заказать звонок</span>
-                                            <div class="btn__arrow btn--red">
-                                                <img src="http://stay.fixmaski.ru/local/templates/stayproperty/img/arrow-white.svg" alt="">
-                                            </div>
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -660,104 +609,87 @@
                             <div class="contacts__tab-description">
                                 Расположенная в Алма-Ате, Аланья, наша квартира спроектирована как 1+1 и имеет площадь 62 м2. Он расположен на 3-м этаже 12-этажного дома и выходит окнами на восток. Расстояние до моря составляет 600 метров.
                             </div>
-                            <div class="contacts__tab-info-wrap">
-                                <div class="contacts__tab-info-left">
-                                    <div class="contacts__tab-img">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/f21/8upvd8t36n2ny48hoc9kc4c9viruu9e9.png" alt="">
-                                    </div>
-                                    <div class="description__info">
-                                        <div class="description__spoller">
-                                            <div class="description__spoller-title-wrap">
-                                                <div class="description__spoller-title-text">
-                                                    <div class="description__spoller-title-box">
-                                                        <div class="description__spoller-title">
-                                                            Расположение на карте
-                                                        </div>
-                                                        <div class="description__spoller-subtitle">
-                                                            Территориальное местонахождение объекта
-                                                        </div>
+                            <div class="contacts__tab-info-left">
+                                <div class="contacts__tab-img">
+                                    <img src="http://stay.fixmaski.ru/upload/iblock/f21/8upvd8t36n2ny48hoc9kc4c9viruu9e9.png" alt="">
+                                </div>
+                                <div class="description__info">
+                                    <div class="description__spoller">
+                                        <div class="description__spoller-title-wrap">
+                                            <div class="description__spoller-title-text">
+                                                <div class="description__spoller-title-box">
+                                                    <div class="description__spoller-title">
+                                                        Расположение на карте
+                                                    </div>
+                                                    <div class="description__spoller-subtitle">
+                                                        Территориальное местонахождение объекта
                                                     </div>
                                                 </div>
-                                                <div class="description__spoller-scenery">
-                                                    <div class="slice"></div>
-                                                    <button class="description__btn">
-                                                        <div class="corner"></div>
-                                                        <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
-                                                        </svg>
-                                                    </button>
-                                                </div>
                                             </div>
-                                            <div class="description__spoller-content">
-                                                <div class="description__spoller-map" id="map"></div>
-                                                <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
-                                                <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
-                                                </script>
-                                                <script>
-                                                    function initMap() {
-                                                        var element = document.getElementById('map');
-                                                        var options = {
-                                                            zoom: 5,
-                                                            center: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                        };
-
-                                                        var myMap = new google.maps.Map(element, options);
-
-                                                        var markers = [{
-                                                            coordinates: {
-                                                                lat: 38.721174589964086,
-                                                                lng: 35.48185084869683
-                                                            },
-                                                            info: '<h3>Турция</h3>'
+                                            <div class="description__spoller-scenery">
+                                                <div class="slice"></div>
+                                                <button class="description__btn">
+                                                    <div class="corner"></div>
+                                                    <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7 1C7 0.447715 7.44772 2.41411e-08 8 0C8.55228 -2.41411e-08 9 0.447715 9 1L7 1ZM8.70711 24.7071C8.31658 25.0976 7.68342 25.0976 7.29289 24.7071L0.928933 18.3431C0.538409 17.9526 0.538409 17.3195 0.928933 16.9289C1.31946 16.5384 1.95262 16.5384 2.34315 16.9289L8 22.5858L13.6569 16.9289C14.0474 16.5384 14.6805 16.5384 15.0711 16.9289C15.4616 17.3195 15.4616 17.9526 15.0711 18.3431L8.70711 24.7071ZM9 1L9 24L7 24L7 1L9 1Z" fill=""></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="description__spoller-content">
+                                            <div class="description__spoller-map" id="map"></div>
+                                            <!-- AIzaSyA1-_BfcFzA372k4_e_oKIsNxAjpD1hdOU -->
+                                            <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=&amp;callback=initMap">
+                                            </script>
+                                            <script>
+                                                function initMap() {
+                                                    var element = document.getElementById('map');
+                                                    var options = {
+                                                        zoom: 5,
+                                                        center: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
                                                         },
-                                                        ];
+                                                    };
 
-                                                        for (var i = 0; i < markers.length; i++) {
-                                                            addMarker(markers[i]);
+                                                    var myMap = new google.maps.Map(element, options);
+
+                                                    var markers = [{
+                                                        coordinates: {
+                                                            lat: 38.721174589964086,
+                                                            lng: 35.48185084869683
+                                                        },
+                                                        info: '<h3>Турция</h3>'
+                                                    },
+                                                    ];
+
+                                                    for (var i = 0; i < markers.length; i++) {
+                                                        addMarker(markers[i]);
+                                                    }
+
+                                                    function addMarker(properties) {
+                                                        var marker = new google.maps.Marker({
+                                                            position: properties.coordinates,
+                                                            map: myMap
+                                                        });
+
+                                                        if (properties.image) {
+                                                            marker.setIcon(properties.image);
                                                         }
 
-                                                        function addMarker(properties) {
-                                                            var marker = new google.maps.Marker({
-                                                                position: properties.coordinates,
-                                                                map: myMap
+                                                        if (properties.info) {
+                                                            var InfoWindow = new google.maps.InfoWindow({
+                                                                content: properties.info
                                                             });
 
-                                                            if (properties.image) {
-                                                                marker.setIcon(properties.image);
-                                                            }
-
-                                                            if (properties.info) {
-                                                                var InfoWindow = new google.maps.InfoWindow({
-                                                                    content: properties.info
-                                                                });
-
-                                                                marker.addListener('click', function () {
-                                                                    InfoWindow.open(myMap, marker);
-                                                                });
-                                                            }
+                                                            marker.addListener('click', function () {
+                                                                InfoWindow.open(myMap, marker);
+                                                            });
                                                         }
                                                     }
-                                                </script>
-                                            </div>
+                                                }
+                                            </script>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="contacts__tab-info-block desctop">
-                                    <div class="articles__right-item black all-bg desctop">
-                                        <img src="http://stay.fixmaski.ru/upload/iblock/b51/d8hwvlsx8smzs2r0iomu3t8ikaevh9o8.png" alt="">
-                                        <div class="articles__item-title">Текст 1</div>
-                                        <div class="articles__item-subtitle">
-                                            Закажите консультацию у опытных менеджеров, которые помогут Вам во всех вопросах
-                                        </div>
-                                        <button type="button" class="articles__item-btn btn open-modal-callback">
-                                            <span>Заказать звонок</span>
-                                            <div class="btn__arrow btn--red">
-                                                <img src="http://stay.fixmaski.ru/local/templates/stayproperty/img/arrow-white.svg" alt="">
-                                            </div>
-                                        </button>
                                     </div>
                                 </div>
                             </div>

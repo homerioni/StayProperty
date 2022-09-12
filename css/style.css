@@ -1288,7 +1288,7 @@ input[type=number] {
 }
 
 .filter__input.articul {
-  width: 39.2rem;
+  width: 17rem;
 }
 .filter__input.input-from {
   border-radius: 1rem 0 0 1rem;
@@ -10661,6 +10661,8 @@ a.support__slide-item-value:hover {
 }
 .contacts__tab-content {
   display: none;
+  flex-direction: column;
+  align-items: center;
 }
 .card__slider-box {
   display: flex;
@@ -11131,6 +11133,7 @@ a.support__slide-item-value:hover {
   line-height: 1.8rem;
   text-decoration: underline;
   color: #8A91AA;
+  cursor: pointer;
 }
 .pop-up__btn {
   order: 2;
@@ -11346,6 +11349,9 @@ a.support__slide-item-value:hover {
 @media (max-width: 48em) {
   .desctop {
     display: none;
+  }
+  .contacts__tab-content {
+    align-items: normal;
   }
   .btn__arrow {
     margin-left: 3rem;
@@ -12032,6 +12038,7 @@ a.support__slide-item-value:hover {
     transition: 0.5s;
   }
   .filter__body {
+    display: none;
     border-radius: 4rem 4rem 4rem 4rem;
     padding: 18rem 4rem 8rem 4rem;
     position: relative;
@@ -15898,7 +15905,7 @@ a.support__slide-item-value:hover {
             flex-direction: column;
     background: none;
     padding: 12rem 0rem 0rem 0rem;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
     position: relative;
     overflow: hidden;
   }
@@ -15975,12 +15982,15 @@ a.support__slide-item-value:hover {
     width: 100%;
   }
   .look__bottom-logo {
-    width: 45%;
+    width: 49%;
+    height: 6.6rem;
   }
   .look__bottom-logo img {
-    height: 10.6rem;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  .look__bottom-logo:nth-child(n + 3) {
+    margin-top: 6rem;
   }
 
   .articles.page-buy .articles__title {
