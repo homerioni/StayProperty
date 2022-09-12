@@ -539,8 +539,7 @@ input[type=number] {
   transition: 0.8s;
 }
 .swiper__arrow.swiper-button-disabled {
-  width: 7.6rem;
-  height: 7.6rem;
+  transform: scale(0.85);
 }
 .swiper__arrow.swiper-button-disabled img {
   width: 1.5rem;
@@ -7825,6 +7824,17 @@ a.support__slide-item-value:hover {
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+.photo-review__hover-text span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+  line-clamp: 11;
+  box-orient: vertical;
+}
 .photo-review .swiper-pagination {
   font-size: 4rem;
   font-weight: 500;
@@ -11339,6 +11349,10 @@ a.support__slide-item-value:hover {
 .real-estate__error-search > button:hover {
   color: rgb(1, 153, 228);
 }
+.bx-core-window img {
+  width: auto;
+  display: initial;
+}
 
 
 
@@ -11790,7 +11804,7 @@ a.support__slide-item-value:hover {
     position: relative;
     height: 100%;
     padding-top: 123rem;
-    margin-bottom: 20.5rem;
+    margin-bottom: 12rem;
   }
   .banner__slider {
     height: 118.8rem;
