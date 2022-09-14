@@ -1,17 +1,17 @@
-function maxValue (full) {
+function mortgageMaxValue (max, min = 0) {
     let arr = [];
     for (let i = 1; i <= 100; i++) {
-        arr.push(i * 1000);
+        if (i * 1000 <= max && i * 1000 >= min) {
+            arr.push(i * 1000);
+        }
     }
     for (let i = 10; i <= 100; i++) {
-        arr.push(i * 10000);
-    }
-    if (full) {
-        for (let i = 10; i <= 100; i++) {
-            arr.push(i * 100000);
+        if (i * 10000 <= max && i * 10000 >= min) {
+            arr.push(i * 10000);
         }
-    } else {
-        for (let i = 10; i <= 50; i++) {
+    }
+    for (let i = 10; i <= 100; i++) {
+        if (i * 100000 <= max && i * 100000 >= min) {
             arr.push(i * 100000);
         }
     }
@@ -19,7 +19,7 @@ function maxValue (full) {
 };
 
 $('.payment').ionRangeSlider({
-    values: [0, 1000],
+    values: [0],
     skin: "round",
     step: 1000,
     grid: false,
@@ -31,7 +31,7 @@ $('.payment').ionRangeSlider({
 let payment = $('.payment').data("ionRangeSlider");
 
 $(".room-cost").ionRangeSlider({
-    values: maxValue(true),
+    values: mortgageMaxValue(1000000),
     step: 1000,
     skin: "round",
     grid: false,
@@ -39,7 +39,8 @@ $(".room-cost").ionRangeSlider({
     hide_min_max: true,
     force_edges: true,
     onChange: function (slider) {
-        let arr = maxValue(false);
+        let maxValue = slider.from_value/2;
+        let arr = mortgageMaxValue(maxValue);
         arr.unshift(0);
         if ($('.room-cost').val() > arr[arr.length-1]) {
             currentMax = arr.length;

@@ -1,6 +1,11 @@
 $(document).ready(function() {
 
-	console.log('dev');
+	// console.log('dev');
+	// let statesUrl = $('.real-estate__number-wrap').attr('states-url')
+	// if(statesUrl)
+	// {
+	// 	history.pushState(null, null, statesUrl);    // == url.href
+	// }
 
 	$('.select__item').on('click', function() {
 		data = $(this).attr('data-id');
@@ -133,6 +138,7 @@ $(document).ready(function() {
 	const blogContentSlider = new Swiper('.blog__content.swiper-slider', {
 		spaceBetween: 40,
 		slidesPerView: 1,
+		watchSlidesProgress: true,
 
 		breakpoints: {
 			769: {
@@ -148,6 +154,7 @@ $(document).ready(function() {
 	const textReviewSlider = new Swiper('.text-review__slider.swiper', {
 		spaceBetween: 40,
 		slidesPerView: 1,
+		watchSlidesProgress: true,
 
 		navigation: {
 			prevEl: '.text-review .prev',
@@ -332,5 +339,36 @@ $(document).ready(function() {
 		return false;
 
 	});
+
+
+	
+
+	// $( document ).on('click', '.real-estate__top-sorting-item', function () {
+	// 	var that = $(this),
+	// 		field = that.attr('field'),
+	// 		method = that.attr('method'),
+	// 		url = that.parent().attr('current-url');
+	//
+	// 		if(method == 'ASC') method = 'DESC';
+	// 		else method = 'ASC';
+	// 		that.attr('method', method);
+	//
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		url: '/ajax/states/changeURL.php',
+	// 		data: data,
+	// 		dataType: 'html',
+	// 		success: function (response) {
+	//
+	// 			var uri = url + response
+	// 			history.pushState(null, null, uri);    // == url.href
+	// 			window.location.reload();
+	//
+	// 		},
+	//
+	// 	});
+	//
+	//
+	// })
 
 });
