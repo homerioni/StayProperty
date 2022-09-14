@@ -2,12 +2,14 @@ $(document).ready(function () {
 
     $('.review-btn').click(function () {
         $('.modal-review__text').text($(this).parent().find('.review-text').text());
+        $('body').css('width', $('body').width());
         $('body').addClass('lock');
         $('.modal-review').css('display', 'flex').hide().fadeIn();
     });
 
     $('.photo-review__slide').click(function () {
         $('.modal-review__text').text($(this).find('.photo-review__hover-text span').text());
+        $('body').css('width', $('body').width());
         $('body').addClass('lock');
         $('.modal-review').css('display', 'flex').hide().fadeIn();
     });
