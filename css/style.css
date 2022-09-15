@@ -7940,8 +7940,8 @@ a.support__slide-item-value:hover {
 }
 .text-review__spoller-wrap.active .text-review__btn svg {
   fill: #ffffff;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .text-review__spoller-text {
   line-height: 1.45;
@@ -13842,8 +13842,8 @@ a.support__slide-item-value:hover {
     margin-bottom: 6.5rem;
   }
   .news__center-inner {
-    padding: 4rem 4rem 0 4rem;
-    height: 100rem;
+    padding: 4rem 4rem 6rem 4rem;
+    height: auto;
   }
   .news__center-absolut-block {
     width: 37rem;
@@ -13874,6 +13874,9 @@ a.support__slide-item-value:hover {
     margin-bottom: 2rem;
   }
   .news__center-heading {
+    position: relative;
+    z-index: 1;
+    width: 53rem;
     font-size: 3.6rem;
     margin-bottom: 1.6rem;
     line-height: 1.3;
@@ -13882,6 +13885,13 @@ a.support__slide-item-value:hover {
   .news__center-subtitle {
     font-size: 3.2rem;
     width: 100%;
+  }
+  .news__center-subtitle:after {
+    content: '';
+    display: block;
+    float: right;
+    width: 7rem;
+    height: 4rem;
   }
   .news__center-bottom {
     position: absolute;
