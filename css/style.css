@@ -6851,7 +6851,7 @@ a.support__slide-item-value:hover {
 }
 
 .real-estate.page-real-estate {
-  margin-bottom: 6rem;
+  margin-bottom: 11.5rem;
 }
 .real-estate.page-real-estate .real-estate__title {
   margin-bottom: 0;
@@ -16264,9 +16264,6 @@ a.support__slide-item-value:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .real-estate.page-real-estate .real-estate__left {
-    margin-bottom: 20rem;
   }
   .real-estate.page-real-estate .real-estate__boxes {
     width: 100%;
