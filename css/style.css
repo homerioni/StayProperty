@@ -1253,6 +1253,9 @@ input[type=number] {
 .filter__inputs {
   display: flex;
 }
+.filter__inputs--one .filter__input {
+  width: 17rem;
+}
 .filter__input {
   position: relative;
   height: 6rem;
@@ -1262,6 +1265,9 @@ input[type=number] {
   font-size: 1.7rem;
   font-weight: 500;
   color: rgb(43, 47, 54);
+}
+.filter__input input::placeholder {
+  color: rgb(138, 145, 170);
 }
 .filter__input.input-id {
   width: 14.1rem;
@@ -1993,6 +1999,7 @@ a.support__slide-item-value:hover {
   font-weight: 400;
   color: rgb(138, 145, 170);
   margin-bottom: 3.5rem;
+  white-space: nowrap;
 }
 .mortgage__ranger-sale {
   position: absolute;
@@ -2102,7 +2109,7 @@ a.support__slide-item-value:hover {
   font-weight: 700;
   color: rgb(43, 47, 54);
 }
-.mortgage__price span {
+.mortgage__price span:first-child {
   font-size: 1.5rem;
   font-weight: 400;
   color: rgb(153, 162, 181);
@@ -2500,15 +2507,15 @@ a.support__slide-item-value:hover {
   padding: 0 2.3rem 12rem 3.5rem;
 }
 .real-estate__text-block:hover .real-estate__box-hover {
-  display: block;
+  /*display: block;*/
 }
 .real-estate__text-block:hover .real-estate__bottom-block .static {
-  display: none;
+  /*display: none;*/
 }
 .real-estate__text-block:hover .real-estate__bottom-block .hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
 }
 .real-estate__box-hover {
   display: none;
@@ -4496,6 +4503,7 @@ a.support__slide-item-value:hover {
   border-radius: inherit;
 }
 .articles__item-title {
+  position: relative;
   font-size: 2.5rem;
   font-weight: 700;
   color: rgb(0, 0, 0);
@@ -4503,6 +4511,7 @@ a.support__slide-item-value:hover {
   line-height: 1.3;
 }
 .articles__item-subtitle {
+  position: relative;
   width: 29rem;
   font-size: 1.7rem;
   font-weight: 400;
@@ -7312,10 +7321,10 @@ a.support__slide-item-value:hover {
 .real-estate.page-real-estate .real-estate__right-block {
   width: 36.2rem;
 }
-.real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .articles__item-title {
-  color: #ffffff;
-  position: relative;
-}
+/*.real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .articles__item-title {*/
+/*  color: #ffffff;*/
+/*  position: relative;*/
+/*}*/
 .real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .articles__item-subtitle {
   color: #9FAAB4;
   position: relative;
@@ -7323,9 +7332,9 @@ a.support__slide-item-value:hover {
 .real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .btn {
   position: relative;
 }
-.real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .btn span {
-  color: #ffffff;
-}
+/*.real-estate.page-real-estate .real-estate__right-block .articles__right-item:first-child .btn span {*/
+/*  color: #ffffff;*/
+/*}*/
 .real-estate.page-real-estate .real-estate__boxes-big {
   width: 116.2rem;
   margin-bottom: 6rem;
@@ -8296,6 +8305,8 @@ a.support__slide-item-value:hover {
      object-fit: contain;
 }
 .card__info-block {
+  display: flex;
+  flex-direction: column;
   width: 36.2rem;
 }
 .card__info-main {
@@ -8410,7 +8421,7 @@ a.support__slide-item-value:hover {
   font-size: 1.3rem;
 }
 .card__price {
-  margin-bottom: 6rem;
+  margin-bottom: 3.8rem;
 }
 .card__price-value {
   font-weight: 600;
@@ -8509,12 +8520,14 @@ a.support__slide-item-value:hover {
           align-items: center;
   width: 100%;
   padding: 1.2rem 4.1rem;
+  margin-top: auto;
 }
 .card__button-name {
   margin-right: 2.7rem;
   font-size: 2.2rem;
   font-weight: 500;
   color: #FFFFFF;
+  white-space: nowrap;
 }
 .card__buttom-arrow {
   width: 3.5rem;
@@ -11373,6 +11386,15 @@ a.support__slide-item-value:hover {
   width: auto;
   display: initial;
 }
+.filter__inputs--one .filter__input input {
+  padding: 2rem;
+}
+.filter__input.articul input {
+  padding: 2rem;
+}
+.filter__input input:focus::placeholder {
+  opacity: 0;
+}
 
 
 
@@ -11606,7 +11628,8 @@ a.support__slide-item-value:hover {
   .header .header__menu-mobile {
     width: 62.4rem;
     height: 100vh;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background: #F6F6FC;
     padding: 7rem 7rem 7rem 4rem;
     display: -webkit-box;
@@ -11874,8 +11897,10 @@ a.support__slide-item-value:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
   .banner__btn-title span {
+    flex: none;
     font-size: 4rem;
     margin-left: 1rem;
   }
@@ -12887,7 +12912,7 @@ a.support__slide-item-value:hover {
     margin-left: auto;
     margin-bottom: 5.2rem;
   }
-  .mortgage__price span {
+  .mortgage__price span:first-child {
     font-size: 3rem;
     margin-right: 0.5rem;
   }
@@ -13396,10 +13421,10 @@ a.support__slide-item-value:hover {
     margin-left: 2rem;
   }
   .rewiews .swiper-slide-next {
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .rewiews .swiper-slide-prev {
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .rewiews__slide-inner {
     border-radius: 8rem;
@@ -13832,7 +13857,8 @@ a.support__slide-item-value:hover {
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
-  .news__left-item-heading {
+  .news__left-item-heading,
+  .news__left-item-heading a {
     font-size: 3.2rem;
   }
   .news__center {
@@ -14799,6 +14825,7 @@ a.support__slide-item-value:hover {
     margin: 0 auto;
     font-size: 3.6rem;
     font-weight: 500;
+    white-space: nowrap;
 
   }
   .blog.blog-slider .blog__btn span {
@@ -18349,6 +18376,13 @@ a.support__slide-item-value:hover {
   .real-estate__error-search {
     font-size: 4.4rem;
     line-height: 6rem;
+  }
+  .filter__inputs--one .filter__input {
+    width: 100%;
+  }
+  .filter__inputs--one .filter__input input,
+  .filter__input.articul input {
+    padding: 3rem 5rem 2rem 5rem;
   }
  }
 

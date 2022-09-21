@@ -88,14 +88,14 @@ $(document).ready(function() {
     });
 
 // появление дополнителньой информации в текстовом блоке карточек с недвижимостью на Главной странице
-    $(document).ready(function () {
-        $('.real-estate__text-block').on('mouseenter', function () {
-            $(this).parent().toggleClass('active');
-        });
-        $('.real-estate__text-block').on('mouseleave', function () {
-            $(this).parent().toggleClass('active');
-        });
-    });
+//     $(document).ready(function () {
+//         $('.real-estate__text-block').on('mouseenter', function () {
+//             $(this).parent().toggleClass('active');
+//         });
+//         $('.real-estate__text-block').on('mouseleave', function () {
+//             $(this).parent().toggleClass('active');
+//         });
+//     });
 
 // кнопки
     $(".real-estate__button-top").click(function (e) {
@@ -669,11 +669,14 @@ $(document).ready(function() {
         // Show the content
         var $content = $(this).next();
         $content.slideToggle();
-        $('.service__spoller-content').not($content).slideUp();
+        $('.service__spoller-content').not($content).slideUp(200);
 
-        $('html, body').animate({
-        	scrollTop: $(this).parent().offset().top
-    	}, 0);
+        let _this = $(this);
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: _this.parent().offset().top
+            }, 200);
+        }, 200);
     });
 
 // $(document).ready(function () {
@@ -775,9 +778,8 @@ $(document).ready(function() {
 
 
     const rewiewsSwiper = new Swiper('.rewiews__slider', {
-        spaceBetween: 60,
+        spaceBetween: rem(7),
         slidesPerView: 1,
-        spaceBetween: 15,
         loop: true,
         watchSlidesProgress: true,
 

@@ -90,7 +90,7 @@ $(document).ready(function() {
 	};
 
 	$('.card-more-btn').click(function () {
-		$(this).parent().find('.card__infrastructure-column.desctop').slideToggle();
+		$(this).parent().toggleClass('active');
 		$(this).toggleClass('active');
 	});
 
@@ -129,10 +129,18 @@ $(document).ready(function() {
 		$('body').addClass('lock');
 		$('.modal-callback').css('display', 'flex').hide().fadeIn();
 	});
-	$('.open-modal-write').click(function () {
+	$('.open-modal-write').click(function (e) {
+		$('input[name="ZAKAZ"]').val($(this).attr('data-name'))
+		$('input[name="OBJECT"]').val($(this).attr('data-object'))
 		$('body').css('width', $('body').width());
 		$('body').addClass('lock');
 		$('.modal-write').css('display', 'flex').hide().fadeIn();
+		e.preventDefault()
+	});
+	$('.open-modal-mortgage').click(function () {
+		$('body').css('width', $('body').width());
+		$('body').addClass('lock');
+		$('.modal-mortgage').css('display', 'flex').hide().fadeIn();
 	});
 	$('.open-modal-vacancy').click(function () {
 		$('body').css('width', $('body').width());
@@ -298,11 +306,12 @@ $(document).ready(function() {
 	});
 
 	$('.feedback-advanced-ajax').submit(function (e) {
+
 		e.preventDefault()
 		var that  = $(this),
 			data  = that.serialize(),
 			name  = that.find('input[name="NAME"]').val(),
-			phone = that.find('input[name="PHONE"]').val()
+			phone = that.find('input[name="PHONE_OR"]').val()
 
 		if(name.length <= 1)
 		{
@@ -323,6 +332,7 @@ $(document).ready(function() {
 			}, 3000)
 			return;
 		}
+
 
 		$.ajax({
 			type: 'POST',
@@ -346,34 +356,83 @@ $(document).ready(function() {
 	});
 
 
-	
+	$('.feedback-mortgage-ajax').submit(function (e) {
 
-	// $( document ).on('click', '.real-estate__top-sorting-item', function () {
-	// 	var that = $(this),
-	// 		field = that.attr('field'),
-	// 		method = that.attr('method'),
-	// 		url = that.parent().attr('current-url');
-	//
-	// 		if(method == 'ASC') method = 'DESC';
-	// 		else method = 'ASC';
-	// 		that.attr('method', method);
-	//
-	// 	$.ajax({
-	// 		type: 'POST',
-	// 		url: '/ajax/states/changeURL.php',
-	// 		data: data,
-	// 		dataType: 'html',
-	// 		success: function (response) {
-	//
-	// 			var uri = url + response
-	// 			history.pushState(null, null, uri);    // == url.href
-	// 			window.location.reload();
-	//
-	// 		},
-	//
-	// 	});
-	//
-	//
-	// })
+		e.preventDefault()
+		var that  = $(this),
+			data  = that.serialize(),
+			name  = that.find('input[name="NAME"]').val(),
+			phone = that.find('input[name="PHONE"]').val(),
+			mortgageCont = $('.mortgage__calculation')
+
+		if(mortgageCont !== undefined && mortgageCont)
+		{
+			var priceFlat   = mortgageCont.find('.mortgage__ranger .irs--round .irs .irs-single').text(),
+				initPayment = mortgageCont.find('.mortgage__rangers-wrap .mortgage__ranger-payment .irs--round .irs .irs-single').text(),
+				creditTime  = mortgageCont.find('.mortgage__rangers-wrap .mortgage__ranger-term .irs--round .irs .irs-single').text(),
+				priceFrom   = mortgageCont.find('.mortgage__bottom .mortgage__price #mortgage-price').text()
+		}
+
+		if(name.length <= 1)
+		{
+			$('.feedback-advanced.errortext-name').show()
+
+			clearTimeout(timeOut);
+			timeOut = setTimeout(function() {
+				$('.feedback-simple.errortext-name').hide()
+			}, 3000)
+			return;
+		}
+		else if(phone.length <= 9)
+		{
+			$('.feedback-advanced.errortext-phone').show()
+			clearTimeout(timeOut);
+			timeOut = setTimeout(function() {
+				$('.feedback-advanced.errortext-phone').hide()
+			}, 3000)
+			return;
+		}
+
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/feedback/advancedForm.php?PRICE_FLAT='+priceFlat+'&INIT_PAYMENT='+initPayment+'&CREDIT_TIME='+creditTime+'&PRICE_FROM='+priceFrom,
+			data: data,
+			dataType: 'html',
+			success: function (response) {
+				if(response == 1)
+				{
+					$('.pop-up__complete').show();
+					that.hide()
+				}
+				else console.log(response)
+			},
+
+		});
+
+
+		return false;
+
+	});
+
+
+	$( document ).on('input', '.object-id', function () {
+		var val = $(this).val()
+		if(val == '' || !val)
+		{
+			$('.second-button-filter').hide()
+			$('.main-button-filter').show()
+		}
+		else
+		{
+			var uri = '/states/' + '?' + 'id_search='+ val
+			$('.second-button-filter').attr('href', uri)
+			$('.main-button-filter').hide()
+			$('.second-button-filter').show()
+		}
+
+	})
+
+
 
 });

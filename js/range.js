@@ -18,6 +18,14 @@ function mortgageMaxValue (max, min = 0) {
     return arr;
 };
 
+function getPriceMortgage() {
+    let roomCost = $('.room-cost').val(),
+        payment = $('.payment').val(),
+        year = $('.term').val();
+
+    return Math.trunc((roomCost - payment) / (year * 12)).toLocaleString();
+}
+
 $('.payment').ionRangeSlider({
     values: [0],
     skin: "round",
@@ -26,6 +34,13 @@ $('.payment').ionRangeSlider({
     postfix: " €",
     hide_min_max: true,
     force_edges: true,
+    onChange: function () {
+        $('.mortgage__price').html(
+            '<span>от </span>' +
+            '<span id="mortgage-price">' + getPriceMortgage() + '</span>' +
+            '<sup>€</sup>'
+        );
+    },
 });
 
 let payment = $('.payment').data("ionRangeSlider");
@@ -51,7 +66,18 @@ $(".room-cost").ionRangeSlider({
         payment.update({
             values: arr,
         });
+        $('.mortgage__price').html(
+            '<span>от </span>' +
+            '<span id="mortgage-price">' + getPriceMortgage() + '</span>' +
+            '<sup>€</sup>'
+        );
     }
+});
+
+let roomCost = $('.room-cost').data("ionRangeSlider");
+
+roomCost.update({
+    values: mortgageMaxValue(100000, 1000),
 });
 
 
@@ -66,6 +92,13 @@ $(".term").ionRangeSlider({
     postfix: " лет",
     hide_min_max: true,
     force_edges: true,
+    onChange: function () {
+        $('.mortgage__price').html(
+            '<span>от </span>' +
+            '<span id="mortgage-price">' + getPriceMortgage() + '</span>' +
+            '<sup>€</sup>'
+        );
+    },
 });
 
 
@@ -147,4 +180,8 @@ $inputTo.on("input", function () {
     });
 });
 
-
+$('.mortgage__price').html(
+    '<span>от </span>' +
+    '<span id="mortgage-price">' + getPriceMortgage() + '</span>' +
+    '<sup>€</sup>'
+);
