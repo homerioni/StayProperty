@@ -25,7 +25,7 @@ $(document).ready(function () {
         $(this).parents('.filter').find('.filter__body').slideToggle();
     });
 
-    $('.articles__text-block img').each(function () {
+    $('.articles__text-block > *:not(.articles__slider, .articles__video-wrap) img').each(function () {
         $(this).css({
             'width': $(this).attr('width') / 10 + 'rem',
             'height': $(this).attr('height') / 10 + 'rem',
@@ -35,5 +35,20 @@ $(document).ready(function () {
         $('.modal-img__content img').attr('src', $(this).attr('src'));
         $('.modal-img').css('display', 'flex').hide().fadeIn();
     });
+
+    $('.stages__progressbar span').each(function () {
+        $(this).css('width', $(this).parent().attr('val') + '%');
+    });
+
+    if ($('.progress').attr('val') > 50) {
+        console.log($('.progress').attr('val'))
+        $('.progress__circle-val-bg').addClass('over-half');
+    }
+    $('.progress__circle-val').css('transform', 'translate(-50%, -50%) rotate(' +
+        ($('.progress').attr('val') * 3.6) +
+        'deg)');
+    $('.progress__circle-val-point').css('transform', 'translate(-50%, -50%) rotate(' +
+        ($('.progress').attr('val') * 3.6) +
+        'deg)');
 
 });

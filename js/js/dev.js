@@ -424,24 +424,6 @@ $(document).ready(function() {
 
 	});
 
-
-	$( document ).on('input', '.object-id', function () {
-		var val = $(this).val()
-		if(val == '' || !val)
-		{
-			$('.second-button-filter').hide()
-			$('.main-button-filter').show()
-		}
-		else
-		{
-			var uri = '/states/' + '?' + 'id_search='+ val
-			$('.second-button-filter').attr('href', uri)
-			$('.main-button-filter').hide()
-			$('.second-button-filter').show()
-		}
-
-	})
-
 	$('.filter__btn-full').click(function () {
 		$(this).parents('.filter__header').toggleClass('active');
 		$(this).parents('.filter').find('.filter__body').slideToggle();

@@ -8321,6 +8321,7 @@ a.support__slide-item-value:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   background: #ECECF8;
   -webkit-box-shadow: inset 0 0 0.4rem rgba(0, 0, 0, 0.25);
           box-shadow: inset 0 0 0.4rem rgba(0, 0, 0, 0.25);
@@ -8336,9 +8337,6 @@ a.support__slide-item-value:hover {
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 2rem;
-}
-.card__info-main-indicators-box {
-  margin-top: 0.8rem;
 }
 .card__info-main-indicators {
   font-size: 1.7rem;
@@ -9548,15 +9546,15 @@ a.support__slide-item-value:hover {
 }
 .stages__progressbar {
   width: 100%;
-  height: 0.3rem;
+  height: 0.4rem;
   background-color: #ffffff;
   border-radius: 10rem;
   position: relative;
 }
-.stages__progressbar::before {
+.stages__progressbar > span {
   content: "";
-  width: 43%;
-  height: 0.5rem;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(90.09deg, rgba(1, 153, 228, 0.3) 0%, rgba(1, 153, 228, 0.5) 45.17%, rgba(1, 153, 228, 0.812047) 85.39%, #0199E4 108.05%);
   border-radius: 10rem;
   position: absolute;
@@ -10582,9 +10580,6 @@ a.support__slide-item-value:hover {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.contacts .breadcrumbs {
-  margin: 6rem 0;
-}
 .contacts__tablinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11406,19 +11401,18 @@ a.support__slide-item-value:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
-  max-height: 90%;
+  height: 90%;
 }
 .modal-img__content img {
   margin: 0;
-  max-width: inherit;
-  max-height: inherit;
+  max-width: 90%;
+  height: 100%;
   object-fit: contain;
 }
 .modal-img__close {
   position: absolute;
-  right: -2rem;
-  top: -6rem;
+  right: -4rem;
+  top: -4rem;
   width: 5rem;
   height: 5rem;
   cursor: pointer;
@@ -11442,6 +11436,85 @@ a.support__slide-item-value:hover {
   height: 2px;
   transform: rotate(-45deg);
   background-color: white;
+}
+.progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  height: 35rem;
+  margin: 0 auto 6rem auto;
+  border: 2.5rem solid white;
+  border-radius: 100%;
+  background-color: #FAFAFF;
+}
+
+.progress__circle-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  width: 27rem;
+  height: 27rem;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #FAFAFF;
+}
+
+.progress__circle-val-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: linear-gradient(90deg, #FAFAFF 50%, transparent 50%, transparent 100%);
+}
+
+.progress__circle-val-bg.over-half {
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  background: linear-gradient(270deg, #0199E4 50%, transparent 50%, transparent 100%);
+}
+
+.progress__circle-val {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  transform: translate(-50%, -50%) rotate(90deg);
+  border-radius: 100%;
+  background: linear-gradient(90deg, #0199E4 50%, transparent 50%, transparent 100%);
+}
+
+.progress__circle-val-point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  border-radius: 100%;
+  background: transparent;
+}
+
+.progress__circle-val-point:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 5;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  transform: translate(-50%, -25%);
+  background-color: #0199E4;
 }
 
 
@@ -17857,7 +17930,7 @@ a.support__slide-item-value:hover {
     left: -1rem;
   }
   .stages__info-progress-text {
-    padding: 1rem;
+    padding: 0;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17879,7 +17952,7 @@ a.support__slide-item-value:hover {
   .stages__day-value {
     font-size: 8rem;
     width: 95%;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
   .stages__day-key {
     font-size: 3.4rem;
@@ -18448,6 +18521,22 @@ a.support__slide-item-value:hover {
   }
   .modal-img__close:after {
     width: 6rem;
+  }
+  .progress {
+    width: 100%;
+    height: 67rem;
+    padding: 4rem 8rem;
+    border: 7.5rem solid white;
+  }
+
+  .progress__circle-bg {
+    width: calc(100% - 5rem);
+    height: calc(100% - 5rem);
+  }
+
+  .progress__circle-val-point:before {
+    width: 6rem;
+    height: 6rem;
   }
  }
 
