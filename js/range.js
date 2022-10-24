@@ -77,14 +77,14 @@ $(".room-cost").ionRangeSlider({
 let roomCost = $('.room-cost').data("ionRangeSlider");
 
 roomCost.update({
-    values: mortgageMaxValue(100000, 1000),
+    values: mortgageMaxValue(1000000, 1000),
 });
 
 
 $(".term").ionRangeSlider({
     // type: "double",
     min: 1,
-    max: 30,
+    max: 5,
     skin: "round",
     // from: 1000,
     // to: 1000000,

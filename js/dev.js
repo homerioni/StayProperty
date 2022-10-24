@@ -1,4 +1,38 @@
+
+
+$('a').each(function () {
+	var linkAttr = $(this).attr('href')
+
+	if (/http/.test(linkAttr) == true)
+		$(this).attr('target', '_blank');
+});
+// $(document).on('click', 'a', function (e) {
+// 	var linkAttr = $(this).attr('href')
+// 	if (/http/.test(linkAttr) == true)
+// 	{
+// 		var width = 1300,
+// 		height = 800,
+// 		left = Number((screen.width / 2) - (width / 2))
+// 		top = Number((screen.height / 2) - (height / 2))
+// 		windowFeatures = 'channelmode=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=0,scrollbars=0,status=0,width='+width+',height='+height+',top=' + top + ',left=' + left;
+
+// 		e.preventDefault();
+// 		window.open(linkAttr, '', windowFeatures);
+		
+// 		return;
+// 	}
+// })
+
+// $('.open-in-new-window').on('click', function(e) {
+// 	e.preventDefault();
+// 	console.log(e)
+// 	// window.open(this.href, '', 'width=900,height=500');
+// 	return;
+// });
+
 $(document).ready(function() {
+
+	
 
 	// console.log('dev');
 	// let statesUrl = $('.real-estate__number-wrap').attr('states-url')
@@ -424,26 +458,5 @@ $(document).ready(function() {
 
 	});
 
-
-	$( document ).on('input', '.object-id', function () {
-		var val = $(this).val()
-		if(val == '' || !val)
-		{
-			$('.second-button-filter').hide()
-			$('.main-button-filter').show()
-		}
-		else
-		{
-			var uri = '/states/' + '?' + 'id_search='+ val
-			$('.second-button-filter').attr('href', uri)
-			$('.main-button-filter').hide()
-			$('.second-button-filter').show()
-		}
-
-	})
-
-	$('.filter__btn-full').click(function () {
-		$(this).parents('.filter__header').toggleClass('active');
-		$(this).parents('.filter').find('.filter__body').slideToggle();
-	});
+	
 });

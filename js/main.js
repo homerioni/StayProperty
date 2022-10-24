@@ -290,6 +290,11 @@ $(document).ready(function() {
             init: sliderCounter,
             slideChange: sliderCounter
         },
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
     });
 
 
@@ -621,15 +626,15 @@ $(document).ready(function() {
     });
 
 // раскрытие фильтра в баннере в мобильной версии
-    if ($('#spoller-filter').length) {
-        if ($(window).width() <= 769) {
-            $(document).ready(function () {
-                $('.filter__header').click(function (event) {
-                    $(this).toggleClass('active').next().slideToggle(300);
-                });
-            });
-        }
-    }
+    // if ($('#spoller-filter').length) {
+    //     if ($(window).width() <= 769) {
+    //         $(document).ready(function () {
+    //             $('.filter__header').click(function (event) {
+    //                 $(this).toggleClass('active').next().slideToggle(300);
+    //             });
+    //         });
+    //     }
+    // }
 
 // раскрытие доп фильров в фильтре
     $(document).ready(function () {
